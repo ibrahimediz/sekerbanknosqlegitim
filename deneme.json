@@ -1,0 +1,20 @@
+{
+    "arabalar": [
+        {
+            "hp": 2000,
+            "model": "BMW 230"
+        },
+        {
+            "hp": 2000,
+            "model": "Ford KUGA"
+        }
+    ],
+    "bosandi": false,
+    "cocuk": [
+        "Mehmet",
+        "Ay\u015fe"
+    ],
+    "evli": false,
+    "isim": "Ali",
+    "yas": 40
+}

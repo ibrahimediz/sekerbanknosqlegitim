@@ -10,3 +10,5 @@
 * pip freeze > requirements.txt
 ###### Listeden kurulum yapabilmek için
 * pip install -r requirements.txt
+###### MONGO DB için ###################
+pip install pymongo
