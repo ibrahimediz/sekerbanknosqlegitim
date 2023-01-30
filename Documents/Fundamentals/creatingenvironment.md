@@ -12,3 +12,7 @@
 * pip install -r requirements.txt
 ###### MONGO DB için ###################
 pip install pymongo
+
+
+
+https://marketplace.visualstudio.com/items?itemName=ms-python.python
