@@ -8,5 +8,5 @@ tasks:
   - name: terminal 1
     init: pip install -r requirements.txt
     command: mkdir -p /workspace/data && mongod --dbpath /workspace/data
-    image:
-      file: .gitpod.dockerfile
+image:
+  file: .gitpod.dockerfile
