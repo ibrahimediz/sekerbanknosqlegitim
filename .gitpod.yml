@@ -3,10 +3,10 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
-
+image:
+  file: .gitpod.dockerfile
 tasks:
   - name: terminal 1
     init: pip install -r requirements.txt
     command: mkdir -p /workspace/data && mongod --dbpath /workspace/data
-image:
-  file: .gitpod.dockerfile
+
