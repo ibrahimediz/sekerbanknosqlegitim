@@ -5,5 +5,8 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - init: pip install -r requirements.txt
-  - init: mkdir -p /workspace/data && mongod --dbpath /workspace/data
+  - name: terminal 1
+    init: pip install -r requirements.txt
+    command: mkdir -p /workspace/data && mongod --dbpath /workspace/data
+    image:
+      file: .gitpod.dockerfile
