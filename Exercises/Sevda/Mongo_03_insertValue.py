@@ -13,4 +13,3 @@ ndictmany= {
     "adi":"sevda",
     "soyadi":"akyuz"
 }
-ncol.insert_many(documents)
