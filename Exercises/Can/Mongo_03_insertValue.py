@@ -2,13 +2,13 @@ import pymongo
 client = pymongo.MongoClient("mongodb+srv://dbuser:dbuser123@cluster0.fjttryf.mongodb.net/?retryWrites=true&w=majority")
 dbName = "candb"
 db=client[dbName]
-colName = "musteriler"
+colName = "sefer"
 col=db[colName]
 sozluk = {
-    "adi":"İbrahim",
-    "soyadi":"EDİZ",
-    "tel":"5554635",
-    "email":"ediz@ibrahimediz.com"
+    "seferno":"001",
+    "kaptan":"murat",
+    "rota":"1-2-3-5-1",
+    "tarih":"20230201"
 }
 res = col.insert_one(sozluk) #### insertOne
 print(*client.list_database_names(),sep="\n")

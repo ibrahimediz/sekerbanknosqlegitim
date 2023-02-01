@@ -11,7 +11,7 @@ sozluk={
           "email":"a@gmail.com"
 }
 res=col.insert_one(sozluk)
-#print(*client.list_database_names(),sep="\n")
-#print("-"*30)
-#print(*db.list_collection_names(),sep="\n")
-#sonuc = client["abdullah"]["musteriler"].insert_one(sozluk)
+print(*client.list_database_names(),sep="\n")
+print("-"*30)
+print(*db.list_collection_names(),sep="\n")
+print(res.inserted_id)
