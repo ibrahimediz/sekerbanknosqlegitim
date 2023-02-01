@@ -5,3 +5,4 @@ col = db["musteriler"]
 kayitlar = col.find({},{"_id":0,"adi":1,"soyadi":1})
 for kayit in kayitlar:
     print(kayit)
+21

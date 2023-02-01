@@ -8,6 +8,7 @@ sozluk = {
     "adi":"İbrahim1",
     "soyadi":"EDİZ",
     "tel":"5554635",
+    "yas":40,
     "email":"ediz@ibrahimediz.com"
 } # döküman
 res = col.insert_one(sozluk) #### insertOne ile tekbir kayıt koleksiyona kaydedildi.

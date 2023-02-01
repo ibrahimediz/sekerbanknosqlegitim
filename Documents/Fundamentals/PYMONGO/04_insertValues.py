@@ -5,22 +5,23 @@ db=client[dbName]
 colName = "musteriler"
 col=db[colName]
 liste = [{
-    "_id":3,
     "adi":"İbrahim",
     "soyadi":"EDİZ",
     "tel":"5554635",
+    "yas":42,
     "email":"ediz@ibrahimediz.com"
 },{
-    "_id":4,
     "adi":"Ege",
     "soyadi":"EDİZ",
     "tel":"5554636",
+    "yas":20,
     "email":"ege@ibrahimediz.com"
 },
 {
     "adi":"Özge",
     "soyadi":"EDİZ",
     "tel":"5554636",
+    "yas":26,
     "email":"ozge@ibrahimediz.com"
 }
 

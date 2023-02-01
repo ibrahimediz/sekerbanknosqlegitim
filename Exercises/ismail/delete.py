@@ -11,6 +11,7 @@ for x in myclient.list_database_names():
 db = myclient["korkmazBd"]
 col = db["musteriler"]
 col.delete_many({})
+f
 db.drop_collection("musteriler")
 myclient.drop_database("korkmazBd")
 print("\nList of databases after deletion\n--------------------------")
