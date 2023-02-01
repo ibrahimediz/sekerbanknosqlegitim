@@ -10,4 +10,4 @@ import os
 os.chdir("./Exercises")
 print(os.listdir())
 for item in os.listdir():
-    open(f"{item}/Mongo_01_Fundamentals.py","a")
+    open(f"{item}/Mongo_02_createDB.py","a")
