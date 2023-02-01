@@ -11,7 +11,8 @@ for kayit in kayitlar:
 
 
 """ Egzersiz
-Biraz önce kayıt yapmış olduğunuz dökümanları sadece adı ve soyadı gözükecek şekilde find fonksiyonunu kullanarak
+Biraz önce kayıt yapmış olduğunuz dökümanları sadece ADI ve SOYADI gözükecek şekilde find fonksiyonunu kullanarak
 listeleyiniz.
 Egzersizi Mongo_06_find.py dosyası içerisine yazabilirsiniz.
 """ 
+

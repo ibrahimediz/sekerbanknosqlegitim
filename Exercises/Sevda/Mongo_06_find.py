@@ -6,5 +6,6 @@ kayitlar=col.find()
 for i in kayitlar:
     print(i)
 kayitlar=col.find({},{"_id":0,"adi":1,"soyadi":1})
+#select adi,soyadi from musteriler
 for i in kayitlar:
     print(i)

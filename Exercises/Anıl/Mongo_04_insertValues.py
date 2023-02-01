@@ -21,3 +21,4 @@ res = col.insert_many(liste)
 print(*client.list_database_names(),sep="\n")
 print("-"*30)
 print(*db.list_collection_names(),sep="\n")
+
