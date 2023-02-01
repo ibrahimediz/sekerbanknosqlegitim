@@ -12,5 +12,6 @@ with client2:
     db=client2.sample_mflix
     #sart={"year":{"$gt":1938}}
     #print(*db.movies.find(sart,{}))
-    sart={"title":{"regex"}}
+    sart={"title":{"$regex":"^Z"}}
+    print(*db.movies.find(sart,{}))
     print(db.movies.count_documents(sart))
