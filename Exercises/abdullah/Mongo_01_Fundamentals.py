@@ -8,7 +8,3 @@ for item in client.list_database_names():
     if item==dbName:
         print("Veritabanı zaten var")
     db = client[dbName]
-    print("---",item,"---")
-    print("#"*30)
-    print(*db.list_collection_names(),sep="\n")
-    print("#"*30)

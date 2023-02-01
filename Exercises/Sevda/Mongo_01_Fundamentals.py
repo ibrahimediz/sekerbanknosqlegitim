@@ -4,4 +4,4 @@ print(*client.list_database_names(),sep="\n")
 for item in client.list_database_names():
     db=client[item]
     print("Collection(Tablo):",item,"---")
-    print(item.)
+    

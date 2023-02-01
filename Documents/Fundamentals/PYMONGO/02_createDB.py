@@ -13,3 +13,9 @@ for item in db.list_collection_names():
     col = db[collectionName] ## koleksiyon oluşturuluyor
 print(*client.list_database_names(),sep="\n")
 print(*db.list_collection_names(),sep="\n")
+
+""" Egzersiz
+1. kendi adınıza bir veritabanı oluşturmak için gereken kodu yazınız
+2. bu veritabanı içerisinde musteriler adında bir koleksiyon oluşturalım
+Egzersizi MongoDB_02_createDB.py dosyası içerisinde yazabilirsiniz.
+""" 
