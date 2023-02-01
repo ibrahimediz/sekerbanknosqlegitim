@@ -1,6 +1,6 @@
 import pymongo
 client = pymongo.MongoClient("mongodb+srv://dbuser:dbuser123@cluster0.fjttryf.mongodb.net/?retryWrites=true&w=majority")
-dbName = "ediz"
+dbName = "ciaydin"
 db=client[dbName]
 colName = "musteriler"
 col=db[colName]
