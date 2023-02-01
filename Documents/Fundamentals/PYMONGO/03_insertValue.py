@@ -5,7 +5,7 @@ db=client[dbName]
 colName = "musteriler"
 col=db[colName]
 sozluk = {
-    "adi":"İbrahim",
+    "adi":"İbrahim1",
     "soyadi":"EDİZ",
     "tel":"5554635",
     "email":"ediz@ibrahimediz.com"

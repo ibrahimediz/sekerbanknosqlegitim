@@ -6,20 +6,20 @@
 SELECT fun, profit FROM real_world WHERE relatinal=false
 """
 
-# import os
-# os.chdir("./Exercises")
-# print(os.listdir())
-# for item in os.listdir():
-#     open(f"{item}/Mongo_04_insertValues.py","a")
-
-########## Çalıştır #############
-import subprocess as sub
 import os
 os.chdir("./Exercises")
 print(os.listdir())
 for item in os.listdir():
-    dosya = open(f"{item}/Mongo_04_insertValues.py","r")
-    if dosya.read() !=  "":
-        print("#"*20,f"{item}","#"*20)
-        res = sub.run(["python",f"{item}/Mongo_02_createDB.py"],stderr=sub.PIPE,text=True)
-        print(res)
+    open(f"{item}/Mongo_06_find.py","a")
+
+########## Çalıştır #############
+# import subprocess as sub
+# import os
+# os.chdir("./Exercises")
+# print(os.listdir())
+# for item in os.listdir():
+#     dosya = open(f"{item}/Mongo_04_insertValues.py","r")
+#     if dosya.read() !=  "":
+#         print("#"*20,f"{item}","#"*20)
+#         res = sub.run(["python",f"{item}/Mongo_02_createDB.py"],stderr=sub.PIPE,text=True)
+#         print(res)
