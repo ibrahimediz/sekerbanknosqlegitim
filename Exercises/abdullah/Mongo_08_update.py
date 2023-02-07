@@ -36,6 +36,6 @@ with client:
         sorgu = {"_id":{"$eq":item["_id"]}}
         yenideger = {"$set":{"adi":item["adi"].upper()}}
         guncelle = db.musteriler.update_one(sorgu, yenideger)
-print(guncelleme.modified_count)
+        print(guncelleme)
 
 
