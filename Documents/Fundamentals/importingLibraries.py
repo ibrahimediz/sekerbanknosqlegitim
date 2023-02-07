@@ -10,7 +10,7 @@ import os
 os.chdir("./Exercises")
 print(os.listdir())
 for item in os.listdir():
-    open(f"{item}/Mongo_07_different_usage.py","a")
+    open(f"{item}/Mongo_08_update.py","a")
 
 ########## Çalıştır #############
 # import subprocess as sub

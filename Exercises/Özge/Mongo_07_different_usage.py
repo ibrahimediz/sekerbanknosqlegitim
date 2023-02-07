@@ -9,8 +9,21 @@ client = pymongo.MongoClient("mongodb+srv://dbuser:dbuser123@cluster0.fjttryf.mo
     print(db.movies.count_documents(sorgu))'''
     
 
+# with client:
+#     db = client.sample_mflix
+#     sorgu = {"title":{"$regex":"^Z"}}
+#     print(db.movies.count_documents(sorgu))
+
+
+""" Egzersiz
+Yukarıdaki kalıbı kullanarak
+sample_training database i içinde yer alan companies koleksiyonunda yer alan dökümanlardan category_code bilgisi
+social ile olan dökümanların sayısı nedir
+Mongo_07_different_usage
+"""
+
+
 with client:
-    db = client.sample_mflix
-    sorgu = {"title":{"$regex":"^Z"}}
+    db = client.sample_training
+    sorgu = {"category_code":{"$regex":"^social"}} 
     print(db.movies.count_documents(sorgu))
-    

@@ -30,3 +30,13 @@ Yukarıdaki kalıbı kullanarak
 sample_mflix database i içinde yer alan movies koleksiyonunda yer alan dökümanlardan title bilgisi
 Z ile başlayan dökümanları sayısı nedir
 """
+
+import pymongo
+client = pymongo.MongoClient("mongodb+srv://dbuser:dbuser123@cluster0.fjttryf.mongodb.net/?retryWrites=true&w=majority")
+
+
+with client:
+    db = client.sample_training
+    sorgu = {"category_code":{"$regex":"^social"}} 
+    # print(*db.companies.find(sorgu,{"_id":0}))
+    print(db.companies.count_documents(sorgu))

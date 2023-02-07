@@ -7,7 +7,7 @@ col = db["musteriler"]
 kayitlar = col.find({},{"_id":0,"adi":1,"tel":1})
 #              sart,hangi başlık
 for kayit in kayitlar:
-    print(kayit)
+    print(kayit["adi"])
 
 
 """ Egzersiz
