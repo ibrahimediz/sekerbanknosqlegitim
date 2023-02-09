@@ -24,5 +24,5 @@ sozluk = {
     ]
 }
 
-sonuc = json.dumps(sozluk,indent=4,sort_keys=True)
+sonuc = z
 print(sonuc,file=open("deneme.json","w",encoding="UTF-8"))
