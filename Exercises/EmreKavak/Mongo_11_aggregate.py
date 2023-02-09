@@ -3,8 +3,15 @@ client = pymongo.MongoClient("mongodb+srv://dbuser:dbuser123@cluster0.fjttryf.mo
 
 db = client["sample_airbnb"]
 col = db["listingsAndReviews"]
-matches= [{"$match":{"bedrooms":{"$gte":3}}}]
+matches= [{"$match":{"bedrooms":{"$eq":3}}}]
 #sorts = [{"$sort":{"bedrooms":pymongo.ASCENDING}}]
-sonuclar = col.aggregate([matches,sorts])
+
+groups = {"$group":{
+    "_id":"$bedrooms",
+    "count":{"$count":{}},
+    "average":{"$avg":"$price"}
+    }
+}
+sonuclar = col.aggregate([groups])
 for item in sonuclar:
-    print(item["listing_url"],item["bedrooms"])
+    print(item)

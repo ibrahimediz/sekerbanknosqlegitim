@@ -1,12 +1,12 @@
 """
 SELECT 
-isim,
-count(islemtipi) as islemsayisi
+isim, # $_id
+count(islemtipi) as islemsayisi # $count
 FROM 
 kayitlar
-WHERE isim = 'tamamlandi'
-group by isim
-order by islemsayisi
+WHERE isim = 'tamamlandi' $matches
+group by isim $group
+order by islemsayisi $sort
 """
 
 from pprint import pprint
@@ -55,8 +55,13 @@ groups = {"$group":{
 }
 #####--------------------- sort of group
 sortsofgrp = {"$sort":{"_id":-1}}
+#####--------------------- projects
+projects = {
+    "$project":
+    {"_id":0,
+    "bedrooms":1}}
 #####-------------------aggregate
-for item in col.aggregate([groups,sortsofgrp]):
+for item in col.aggregate([groups]):
     print(item)
 
 
@@ -65,4 +70,6 @@ Egzersiz
 sample_airbnb database içindeki listingsAndReviews koleksiyonu içerisinde bulunan dökümanlardan
 bedrooms alanına göre gruplanan verilerde ortalama fiyat (price) değerini ekrana yazdıran python programını yazınız.
 $avg kullanılabilir
+5 odalı evlerin ortama fiyatı nedir?
+
 """

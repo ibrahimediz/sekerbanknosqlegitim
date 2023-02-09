@@ -9,37 +9,76 @@ group by isim
 order by islemsayisi
 """
 
- from pprint import pprint
- import pymongo
- client = pymongo.MongoClient("mongodb+srv://dbuser:dbuser123@cluster0.fjttryf.mongodb.net/?retryWrites=true&w=majority")
-# ##### match sort
-# db = client["sample_mflix"]
-# col = db["movies"]
+from pprint import pprint
+import pymongo
+client = pymongo.MongoClient("mongodb+srv://dbuser:dbuser123@cluster0.fjttryf.mongodb.net/?retryWrites=true&w=majority")
+##### match sort
+db = client["sample_mflix"]
+col = db["movies"]
 
-# match= {
-#         "$match":{
-#             "title":"A Star Is Born"
-#             }
-#     }
-# sorting =    {
-#         "$sort":{
-#             "year":pymongo.ASCENDING
-#         }
-#     }
-# limit = {"$limit":2}
-# pipeline = [match,sorting,limit]
-# sonuclar = col.aggregate(pipeline)
-# for item in sonuclar:
-#     pprint(item["year"])
+match= {
+        "$match":{
+            "title":"A Star Is Born"
+            }
+    }
+sorting =    {
+        "$sort":{
+            "year":pymongo.ASCENDING
+        }
+    }
+limit = {"$limit":2}
+pipeline = [match,sorting,limit]
+sonuclar = col.aggregate(pipeline)
+for item in sonuclar:
+    print(item["year"])
+
+
+
+"""
+Egzersiz
+sample_airbnb database içindeki listingsAndReviews koleksiyonu içerisinde bulunan dökümanlardan
+yatak sayısı (bedrooms) 3 ten yüksek olan kayıtların  listing_url ve bedrooms başlıklarını ekrana yazdırınız.
+"""
+db = client["sample_airbnb"]
+col = db["listingsAndReviews"]
+#####-------------------matches
+matches = {"$match":{"bedrooms":{"$gt":3}}}
+#####-------------------sort
+sorts = {"$sort":{"bedrooms":pymongo.DESCENDING}}
+#####-------------------limit
+limits = {"$limit":5}
+#####-------------------group
+groups = {"$group":{
+    "_id":"$bedrooms",
+    "count":{"$count":{}},
+    }
+}
+#####--------------------- sort of group
+sortsofgrp = {"$sort":{"_id":-1}}
+#####-------------------aggregate
+for item in col.aggregate([groups,sortsofgrp]):
+    print(item)
+
+
+"""
+Egzersiz
+sample_airbnb database içindeki listingsAndReviews koleksiyonu içerisinde bulunan dökümanlardan
+bedrooms alanına göre gruplanan verilerde ortalama fiyat (price) değerini ekrana yazdıran python programını yazınız.
+$avg kullanılabilir
+"""
+
 
 
 
 
 
 db = client["sample_airbnb"]
-col = db["listingAndReviews"]
-match= {"$match":{"bedrooms":{"gt":3 } }}
-sorts = {"$sort":{"bedrooms":PYMONGO.DESC}}
-limits = {"$limit":5}
-for item in col.aggregate([matches,sorts,limits]):
- print(item["listing_url"],item["bedrooms"])
+col = db["listingsAndReviews"]
+matches = {"$match":{"bedrooms":{"$eq":5}}}
+avg = {"$avg":{"price":{}}}
+sorts = {"$sort":{"bedrooms":pymongo.DESCENDING}}
+groups = {"$group":{
+ "$bedrooms"
+    }
+    }
+ print(avg)
